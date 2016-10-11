@@ -1,0 +1,66 @@
+mkdir soa2016-gitplay
+cd soa2016-gitplay/
+emacs README.md      # created basic file
+git init
+ls -a                # find there is a .git/ folder now!
+ls .git/             # peek into .git/ folder (ignore it for now)
+git status           # see that README.md file is not "staged" for commit
+git add README.md    # stage README.md for changes
+git status
+git commit -m "Created a README"     # take a snapshot of the folder now
+git status
+git log              # see our history of commits (just one so far)
+emacs script.rb      # start a new file (not staged by git yet)
+git status
+git add .            # stage script.rb for a commit as well
+git status
+emacs README.md      # modify our README.md
+git status           # see that our changes to README.md are not staged
+git add .            # stage changed README.md file
+git status
+git commit -m "Added script file; added line to README"    # snapshot!
+git status
+git log              # see two commits in our history now
+git checkout ab4142b # checkout an old commit; view but don't make changes!
+ls
+cat README.md
+git checkout master  # come back to reality (our working branch)
+mv script.rb app.rb  # move our script to give it a new name
+emacs README.md      # edit our README again
+git status           # two changed files; one new file (app.rb)
+git add .            # stage changes
+git status
+git commit -m "Renamed script to app.rb"   # third commit in a row
+git log
+git status
+git branch library   # let's start a new direction in our work!
+git checkout library # let's change to working in this new direction
+mkdir lib            # add a new folder and new files
+emacs app.rb         # modify our app.rb in master branch
+emacs lib/name.rb    # add a new file
+git status
+git add .
+git status
+git commit -m "Make a lib folder for business code"    # new commit on library branch!
+git status
+git log
+git checkout master  # go back to our master branch
+emacs app.rb         # edit app.rb on master (we've created a conflict with line 39!)
+git status
+git add .
+git commit -m "Friendlier greeting in app"   # conflicting changes committed
+git l                # secret version of `git log` that you don't have :D
+git checkout library # go back to library branch
+mkdir data           # add a data folder and file
+emacs data/names.yml
+git add .
+git commit -m "Create a data file"     # add new data to library branch
+git l
+git checkout master  # go back to our master branch
+git merge library    # merge work in library back into master --> CONFLICT!
+git status
+macs app.rb         # fix CONFLICT and save
+git add app.rb       # stage conflicted file
+git commit -m "Fixed app.rb to reflect library style code" # commit to finish merge
+git l                # sit back and enjoy our branching and merging!
+history              # see this history of commands on unix bash :)
