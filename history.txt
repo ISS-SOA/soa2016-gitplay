@@ -1,3 +1,26 @@
+* 7e72706 (HEAD -> master, origin/master) Update history file (Soumya Ray on 2016-10-14)
+*   41ad541 Merge pull request #1 from ISS-SOA/tests (Soumya Ray on 2016-10-13)
+|\  
+| | * 6ec4146 (fixtures) Added a links section to data fixture (Soumya Ray on 2016-10-13)
+| | * 98c2de0 Added a data fixture (Soumya Ray on 2016-10-13)
+| | * 1305754 (tests) Added comment to specs (Soumya Ray on 2016-10-13)
+| |/  
+| * a0bc617 Tested that app main value is true (Soumya Ray on 2016-10-13)
+| * 950f1d5 Passed first set of tests (Soumya Ray on 2016-10-13)
+|/  
+* 4fd57fc Add history file to repo (Soumya Ray on 2016-10-11)
+*   df4cf09 Fixed app.rb to reflect library style code (Soumya Ray on 2016-10-11)
+|\  
+| * a8fce4c (origin/library, library) Create a data file (Soumya Ray on 2016-10-11)
+| * 1ec16ac Make a lib folder for business code (Soumya Ray on 2016-10-11)
+* | 660a36a Friendlier greeting in app (Soumya Ray on 2016-10-11)
+|/  
+* ebc348b Renamed script to app.rb (Soumya Ray on 2016-10-11)
+* f7e5f38 Added script file; added line to README (Soumya Ray on 2016-10-11)
+* ab4142b Created a README (Soumya Ray on 2016-10-11)
+
+
+
 mkdir soa2016-gitplay
 cd soa2016-gitplay/
 emacs README.md       # created basic file
